@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.container-box {
+  @apply sm:max-w-full md:max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto px-5 pt-7 pb-5;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+.light-theme {
+  @apply bg-gradient-to-br from-pink-200 via-white from-0% to-100% to-violet-200;
+}
+
+.dark-theme {
+  @apply dark:bg-gradient-to-br dark:from-pink-950 dark:via-slate-950 dark:from-0% dark:to-100% dark:to-blue-950;
+}
+
+.btn {
+  @apply font-medium capitalize cursor-pointer rounded-md;
+}
+
+.btn-hover {
+  @apply hover:outline-2 hover:outline-indigo-600;
+}
+
+.item {
+  @apply flex items-center gap-3 sm:w-6/12 mb-4 p-0.5 capitalize;
+}
+
+.card {
+  @apply flex justify-between items-start mb-4 capitalize sm:w-6/12;
+}
+
+.link {
+  @apply capitalize cursor-pointer pe-8 mb-5;
+}
+
+.num {
+  @apply sm:w-6/12 md:w-3/12 mb-8 pe-8;
+}
