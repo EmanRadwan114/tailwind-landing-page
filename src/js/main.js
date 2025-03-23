@@ -5,17 +5,18 @@ const navItems = document.querySelector(".nav-items");
 const themeBtn = document.querySelector(".theme-mode");
 const themeIcon = document.querySelector(".theme-mode i");
 const mainContainer = document.querySelector(".main-bg");
+const mainContent = document.querySelector(".content");
 
 function showMenu() {
-  header.classList.add("bg-purple-200");
+  header.classList.add("bg-purple-200", "nav-dark-theme", "menu");
   menuBtn.classList.toggle("closed");
   navItems.classList.toggle("hidden");
-  menuIcon.className = "fa-solid fa-xmark";
+  menuIcon.className = "fa-solid fa-xmark pe-3";
   document.body.classList.add("overflow-hidden");
 }
 
 function hideMenu() {
-  header.classList.remove("bg-purple-200");
+  header.classList.remove("bg-purple-200", "nav-dark-theme", "menu");
   menuBtn.classList.toggle("closed");
   navItems.classList.toggle("hidden");
   menuIcon.className = "fa-solid fa-bars";
@@ -35,13 +36,13 @@ function switchThemeMode() {
     themeIcon.className = "fa-solid fa-sun";
     this.classList.toggle("light");
     mainContainer.classList.remove("light-theme");
-    document.body.classList.add("dark-theme");
+    mainContent.classList.add("dark-theme");
     document.body.classList.toggle("dark");
   } else {
     themeIcon.className = "fa-solid fa-moon";
     this.classList.toggle("light");
     mainContainer.classList.add("light-theme");
-    document.body.classList.remove("dark-theme");
+    mainContent.classList.remove("dark-theme");
     document.body.classList.toggle("dark");
   }
 }

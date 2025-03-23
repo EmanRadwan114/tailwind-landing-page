@@ -10,17 +10,11 @@
     />
     <link rel="stylesheet" href="./src/css/output.css" />
   </head>
-  <body class="dark relative text-gray-900 dark:text-gray-200">
-    <!-- remove dark, dark-theme -->
-
-    <div class="content dark-theme">
-      <div class="main-bg relative">
-        <!-- add light theme -->
-
+  <body class="relative text-gray-900 dark:text-gray-200">
+    <div class="content">
+      <div class="main-bg relative light-theme">
         <!-- ^ ----------------------------header---------------------------- -->
-        <header
-          class="min-h-screen md:min-h-auto absolute top-0 start-0 bottom-0 end-0 md:static"
-        >
+        <header class="md:min-h-auto absolute start-0 end-0 md:static">
           <div class="container-box">
             <nav>
               <button
@@ -61,7 +55,7 @@
 
         <!-- ^ ----------------------------hero section---------------------------- -->
         <div class="container-box">
-          <section class="hero text-center min-h-screen flex-center flex-col">
+          <section class="hero text-center min-h-[90vh] flex-center flex-col">
             <p class="border border-gray-300 text-xs px-3 py-1 rounded-full">
               Announcing our next round of funding.
               <a
@@ -96,8 +90,10 @@
           </section>
         </div>
       </div>
+
       <!-- ^ ----------------------------pricing---------------------------- -->
       <div class="container-box">
+        <hr class="text-gray-400 invisible dark:visible" />
         <section class="pricing my-20">
           <h2
             class="capitalize text-center text-xl sm:text-2xl font-bold text-balance mb-4"
@@ -126,26 +122,36 @@
                 Incidunt necessitatibus <br />
                 quasi accusantium ducimus facere ad, unde commodi.
               </p>
-              <p class="capitalize text-indigo-400 font-medium mb-8">
+              <p
+                class="capitalize text-indigo-800 dark:text-indigo-400 font-medium mb-8"
+              >
                 What's included
               </p>
               <div
                 class="items flex flex-col sm:flex-row flex-wrap sm:justify-between sm:items-center"
               >
                 <div class="item">
-                  <i class="fa-solid fa-check text-indigo-400"></i>
+                  <i
+                    class="fa-solid fa-check text-indigo-800 dark:text-indigo-400"
+                  ></i>
                   <span>private forum access</span>
                 </div>
                 <div class="item">
-                  <i class="fa-solid fa-check text-indigo-400"></i>
+                  <i
+                    class="fa-solid fa-check text-indigo-800 dark:text-indigo-400"
+                  ></i>
                   <span>member resources</span>
                 </div>
                 <div class="item">
-                  <i class="fa-solid fa-check text-indigo-400"></i>
+                  <i
+                    class="fa-solid fa-check text-indigo-800 dark:text-indigo-400"
+                  ></i>
                   <span>entry to annual conference</span>
                 </div>
                 <div class="item">
-                  <i class="fa-solid fa-check text-indigo-400"></i>
+                  <i
+                    class="fa-solid fa-check text-indigo-800 dark:text-indigo-400"
+                  ></i>
                   <span>official member t-shirt</span>
                 </div>
               </div>
@@ -161,7 +167,7 @@
                   <span class="text-3xl md:text-4xl font-bold">$349</span>USD
                 </p>
                 <button
-                  class="btn bg-indigo-600 text-white cursor-pointer text-sm p-2 block w-full mb-7"
+                  class="btn bg-indigo-600 text-white text-sm p-2 block w-full mb-7"
                 >
                   get access
                 </button>
@@ -176,7 +182,9 @@
         <!-- ^ ----------------------------deploy---------------------------- -->
         <hr class="text-gray-400" />
         <section class="deploy my-20">
-          <p class="text-indigo-400 font-medium capitalize text-center text-sm">
+          <p
+            class="text-indigo-800 dark:text-indigo-400 font-medium capitalize text-center text-sm"
+          >
             Deploy faster
           </p>
           <h2
@@ -196,7 +204,7 @@
           >
             <div class="card pb-9 pe-3">
               <div
-                class="card-icon flex-center bg-indigo-400 rounded-md p-2 w-1/12"
+                class="card-icon flex-center bg-indigo-800 dark:bg-indigo-400 rounded-md p-2 w-1/12"
               >
                 <i class="fa-solid fa-cloud-arrow-up text-white text-sm"></i>
               </div>
@@ -212,7 +220,7 @@
             </div>
             <div class="card pb-9 pe-3">
               <div
-                class="card-icon flex-center bg-indigo-400 rounded-md p-2 w-1/12"
+                class="card-icon flex-center bg-indigo-800 dark:bg-indigo-400 rounded-md p-2 w-1/12"
               >
                 <i class="fa-solid fa-lock text-white text-sm"></i>
               </div>
@@ -228,7 +236,7 @@
             </div>
             <div class="card pb-9 pe-3">
               <div
-                class="card-icon flex-center bg-indigo-400 rounded-md p-2 w-1/12"
+                class="card-icon flex-center bg-indigo-800 dark:bg-indigo-400 rounded-md p-2 w-1/12"
               >
                 <i class="fa-solid fa-arrows-rotate text-white text-sm"></i>
               </div>
@@ -244,7 +252,7 @@
             </div>
             <div class="card pb-9 pe-3">
               <div
-                class="card-icon flex-center bg-indigo-400 rounded-md p-2 w-1/12"
+                class="card-icon flex-center bg-indigo-800 dark:bg-indigo-400 rounded-md p-2 w-1/12"
               >
                 <i class="fa-solid fa-fingerprint text-white text-sm"></i>
               </div>

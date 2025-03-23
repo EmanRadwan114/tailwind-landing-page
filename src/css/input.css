@@ -18,6 +18,14 @@
   @apply dark:bg-gradient-to-br dark:from-pink-950 dark:via-slate-950 dark:from-0% dark:to-100% dark:to-blue-950;
 }
 
+.menu {
+  @apply min-h-screen top-0 bottom-0;
+}
+
+.nav-dark-theme {
+  @apply dark:bg-gradient-to-br dark:from-pink-950 dark:via-slate-900 dark:from-0% dark:to-100% dark:to-blue-950;
+}
+
 .btn {
   @apply font-medium capitalize cursor-pointer rounded-md;
 }
