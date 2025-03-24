@@ -10,7 +10,114 @@
     />
     <link rel="stylesheet" href="../css/output.css" />
   </head>
-  <body>
+  <body class="relative text-gray-900 dark:text-gray-200">
+    <div class="content">
+      <div class="main-bg relative light-theme">
+        <!-- ^ ----------------------------header---------------------------- -->
+        <header class="md:min-h-auto absolute start-0 end-0 md:static">
+          <div class="container-box">
+            <nav>
+              <button
+                class="menu-btn block ms-auto md:hidden cursor-pointer closed p-1"
+              >
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+              </button>
+              <div
+                class="nav-items hidden md:flex md:items-center md:justify-end font-semibold"
+              >
+                <ul
+                  class="flex flex-col gap-9 text-center mb-7 md:mb-0 md:flex-row md:justify-center md:w-8/12"
+                >
+                  <li><a href="#">Product</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Marketplace</a></li>
+                  <li><a href="#">Company</a></li>
+                </ul>
+                <div
+                  class="nav-btns flex flex-col md:flex-row md:w-2/12 items-center justify-end"
+                >
+                  <button
+                    class="theme-mode light cursor-pointer mt-9 md:mt-0 md:w-4/12 text-end text-xl order-last md:order-first pe-2"
+                  >
+                    <i class="fa-solid fa-moon"></i>
+                  </button>
+                  <button class="login m-auto block align-middle md:w-8/12">
+                    <a href="./login.html"
+                      >Log in
+                      <i class="fa-solid fa-arrow-right-long ms-1"></i>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </header>
+
+        <!-- ^ ----------------------------login form---------------------------- -->
+        <section
+          class="login min-h-[87vh] sm:w-6/12 lg:w-4/12 m-auto flex items-center"
+        >
+          <div class="container-box w-full">
+            <h1 class="heading text-2xl mb-10">
+              <i
+                class="fa-brands fa-square-pied-piper pe-3 text-indigo-600 dark:text-indigo-400"
+              ></i>
+              Your company
+            </h1>
+
+            <form action="#" method="post" class="mb-8" id="sign-in-form">
+              <h2 class="heading text-center mb-10 text-xl">
+                sign in to your account
+              </h2>
+              <div class="form-control mb-6">
+                <label for="email" class="capitalize block mb-2 font-semibold"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter Your Email"
+                  class="w-full outline outline-gray-400 px-2 py-1 rounded-sm focus-within:outline-indigo-600 focus-within:outline-2 focus-within:caret-pink-950 placeholder:text-sm"
+                />
+              </div>
+              <div class="form-control mb-6">
+                <label
+                  for="password"
+                  class="capitalize block mb-2 font-semibold"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Enter Your Password"
+                  class="w-full outline outline-gray-400 px-2 py-1 rounded-sm focus-within:outline-indigo-600 focus-within:outline-2 focus-within:caret-pink-950 placeholder:text-sm"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="Sign-in-btn"
+                class="btn bg-indigo-600 text-white text-sm p-2 w-full"
+              >
+                <a href="../../index.html">Sign in</a>
+              </button>
+            </form>
+
+            <p
+              class="text-xs font-medium text-gray-600 dark:text-gray-200 text-center"
+            >
+              Not a Member?
+              <span class="text-indigo-600 dark:text-indigo-400"
+                >start a 14 day free trial</span
+              >
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
     <!-- ^ ----------------------------script---------------------------- -->
     <script src="../js/main.js"></script>
   </body>

@@ -26,6 +26,14 @@
   @apply dark:bg-gradient-to-br dark:from-pink-950 dark:via-slate-900 dark:from-0% dark:to-100% dark:to-blue-950;
 }
 
+.heading {
+  @apply capitalize font-bold text-balance;
+}
+
+.h1 {
+  @apply text-2xl sm:text-3xl md:text-4xl mt-7 mb-4;
+}
+
 .btn {
   @apply font-medium capitalize cursor-pointer rounded-md;
 }
