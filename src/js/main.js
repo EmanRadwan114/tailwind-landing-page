@@ -7,6 +7,7 @@ const themeIcon = document.querySelector(".theme-mode i");
 const mainContainer = document.querySelector(".main-bg");
 const mainContent = document.querySelector(".content");
 const SignInForm = document.getElementById("Sign-in-form");
+const SignInBtn = document.getElementById("Sign-in-btn");
 
 function showMenu() {
   header.classList.add("bg-purple-200", "nav-dark-theme", "menu");
@@ -51,5 +52,8 @@ function switchThemeMode() {
 themeBtn.addEventListener("click", switchThemeMode);
 
 SignInForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+SignInBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
