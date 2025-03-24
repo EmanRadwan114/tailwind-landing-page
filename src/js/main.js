@@ -8,6 +8,7 @@ const mainContainer = document.querySelector(".main-bg");
 const mainContent = document.querySelector(".content");
 const SignInForm = document.getElementById("Sign-in-form");
 const SignInBtn = document.getElementById("Sign-in-btn");
+const loginBtn = document.getElementById("login-btn");
 
 function showMenu() {
   header.classList.add("bg-purple-200", "nav-dark-theme", "menu");
@@ -33,27 +34,41 @@ menuBtn.addEventListener("click", function () {
   }
 });
 
-function switchThemeMode() {
-  if (this.classList.contains("light")) {
-    themeIcon.className = "fa-solid fa-sun";
-    this.classList.toggle("light");
-    mainContainer.classList.remove("light-theme");
-    mainContent.classList.add("dark-theme");
-    document.body.classList.toggle("dark");
-  } else {
-    themeIcon.className = "fa-solid fa-moon";
-    this.classList.toggle("light");
-    mainContainer.classList.add("light-theme");
-    mainContent.classList.remove("dark-theme");
-    document.body.classList.toggle("dark");
-  }
+// On page load or when changing themes
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  switchToDarkTheme();
 }
 
-themeBtn.addEventListener("click", switchThemeMode);
+function switchToDarkTheme() {
+  themeIcon.className = "fa-solid fa-sun";
+  themeBtn.classList.remove("light");
+  mainContainer.classList.remove("light-theme");
+  mainContent.classList.add("dark-theme");
+  document.body.classList.add("dark");
+  localStorage.theme = "dark";
+}
 
-SignInForm.addEventListener("submit", (e) => {
-  e.preventDefault();
+function switchToLightTheme() {
+  themeIcon.className = "fa-solid fa-moon";
+  themeBtn.classList.add("light");
+  mainContainer.classList.add("light-theme");
+  mainContent.classList.remove("dark-theme");
+  document.body.classList.remove("dark");
+  localStorage.theme = "light";
+}
+
+themeBtn.addEventListener("click", function () {
+  if (this.classList.contains("light")) {
+    switchToDarkTheme();
+  } else {
+    switchToLightTheme();
+  }
 });
-SignInBtn.addEventListener("click", (e) => {
+
+SignInForm?.addEventListener("submit", (e) => {
   e.preventDefault();
 });
